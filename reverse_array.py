@@ -1,5 +1,9 @@
 def reverse_array(nums):
 
+
+# O(N) complexity 
+# In place algorithm
+
 	start_index = 0
 	end_index = len(nums) - 1
 
