@@ -1,3 +1,6 @@
+#O(N) 
+
+
 
 def is_palindrom(str):
 	original_str = str
@@ -9,4 +12,11 @@ def is_palindrom(str):
 	return False
 
 
-def is_palindrom
+def is_palindrom_python(str):
+	return str == ''.join(str[::-1])
+
+
+if __name__ == "__main__":
+
+	str = 'radar'
+	print(is_palindrom_python(str))
