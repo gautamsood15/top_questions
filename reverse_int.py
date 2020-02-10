@@ -1,3 +1,5 @@
+#O(N)
+
 
 
 def reverse_integer(n):
