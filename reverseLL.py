@@ -12,16 +12,20 @@ class LinkedList(object):
 		self.size = 0
 
 
-	def get_middle_node(self):
 
-		slow_pointer = self.head
-		fast_pointer = self.head
 
-		while fast_pointer.nextNode and fast_pointer.nextNode.nextNode:
-			fast_pointer = fast_pointer.nextNode.nextNode
-			slow_pointer = slow_pointer.nextNode
+	def reverse(self):
+		currNode = self.head
+		prevNode = None
+		nextNode = None
 
-		return slow_pointer
+		while currNode is not None:
+			nextNode = currNode.nextNode
+			currNode.nextNode = prevNode
+			prevNode = currNode
+			currNode = nextNode
+
+		self.head = prevNode
 
 
 
@@ -102,7 +106,9 @@ linkedlist.insert_start(122)
 linkedlist.insert_start(3)
 linkedlist.insertEnd(31)
 
+linkedlist.reverse()
 linkedlist.traverse()
+
 
 linkedlist.remove(3)
 linkedlist.remove(12)
@@ -110,21 +116,3 @@ linkedlist.remove(122)
 linkedlist.remove(31)
 
 print(linkedlist.size2())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
