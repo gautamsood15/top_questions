@@ -6,6 +6,11 @@ def kadane_algorithm(nums):
 
 	for i in range(0,len(nums)):
 
+		#if nums[i] > (max_current+nums[i]):
+		#	max_current = nums[i]
+		#else:
+		#	max_current += nums[i]
+
 		max_current = max(nums[i], nums[i]+ max_current)
 
 		if max_global < max_current:
