@@ -35,4 +35,46 @@ class LinkedList(object):
 		currNode = self.head
 		prevNode = None
 
-		 
+		while currNode.data != data:
+			prevNode = currNode
+			currNode = currNode.nextNode   
+
+		if prevNode is None:
+			self.head = currNode.nextNode
+		else:
+			prevNode.nextNode = currNode.nextNode
+
+	def size1(self):
+		return self.size
+
+	def size2(self):
+
+		actualNode = self.head
+		size = 0
+
+		while actualNode is not None:
+			actualNode = actualNode.nextNode
+			size+=1
+
+		return size
+
+
+	def insertEnd(self, data):
+
+		self.size = self.size + 1
+		newNode = Node(data)
+
+		actualNode = self.head
+
+		while actualNode.nextNode is not None:
+			actualNode = actualNode.nextNode
+
+		actualNode.nextNode = newNode
+
+
+
+
+
+
+
+
