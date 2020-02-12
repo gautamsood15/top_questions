@@ -71,6 +71,41 @@ class LinkedList(object):
 
 		actualNode.nextNode = newNode
 
+	def traverse(self):
+
+		actualNode = self.head
+
+		while actualNode is not None:
+			print("%d" % actualNode.data)
+			actualNode = actualNode.nextNode
+
+
+linkedlist = LinkedList()
+
+linkedlist.insert_start(12)
+linkedlist.insert_start(122)
+linkedlist.insert_start(3)
+linkedlist.insertEnd(31)
+
+linkedlist.traverse()
+
+linkedlist.remove(3)
+linkedlist.remove(12)
+linkedlist.remove(122)
+linkedlist.remove(31)
+
+print(linkedlist.size2())
+
+
+
+
+
+
+
+
+
+
+
 
 
 
