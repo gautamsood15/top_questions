@@ -15,17 +15,19 @@ class LinkedList(object):
 
 
 	def reverse(self):
+		
 		currNode = self.head
 		prevNode = None
-		nextNode = None
+		next_Node = None
 
 		while currNode is not None:
-			nextNode = currNode.nextNode
+			next_Node = currNode.nextNode
 			currNode.nextNode = prevNode
 			prevNode = currNode
-			currNode = nextNode
+			currNode = next_Node
 
 		self.head = prevNode
+
 
 
 
